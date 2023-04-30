@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/sun_moon"
+        android:src="@mipmap/sun_icon_foreground"
+        app:layout_constraintTop_toTopOf="@+id/location_label"
+        app:layout_constraintEnd_toStartOf="@+id/location_label"/>
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:id="@+id/location_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/location_label"
+        app:layout_constraintTop_toTopOf="@+id/location_label"
+        tools:text="Bengazhi"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="Temp:"
+        android:id="@+id/temp_label"
+        app:layout_constraintTop_toBottomOf="@+id/location_label"
+        app:layout_constraintStart_toStartOf="@+id/location_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperature"
+        android:text="55CCCC"
+        app:layout_constraintStart_toEndOf="@+id/temp_label"
+        app:layout_constraintTop_toTopOf="@+id/temp_label"
+        tools:text="31C"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="Feels like:"
+        android:id="@+id/feels_temp_label"
+        app:layout_constraintTop_toBottomOf="@+id/temp_label"
+        app:layout_constraintStart_toStartOf="@+id/location_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/feel_temperature"
+        app:layout_constraintStart_toEndOf="@+id/feels_temp_label"
+        app:layout_constraintTop_toTopOf="@+id/feels_temp_label"
+        tools:text="33C"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="Wind: "
+        android:id="@+id/wind_label"
+        app:layout_constraintTop_toBottomOf="@+id/feels_temp_label"
+        app:layout_constraintStart_toStartOf="@+id/location_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wind_direction_speed"
+        app:layout_constraintStart_toEndOf="@+id/wind_label"
+        app:layout_constraintTop_toTopOf="@+id/wind_label"
+        tools:text="228kmph East"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="Update at: "
+        android:id="@+id/updated_label"
+        app:layout_constraintTop_toBottomOf="@+id/wind_label"
+        app:layout_constraintStart_toStartOf="@+id/location_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updated_last"
+        app:layout_constraintStart_toEndOf="@+id/updated_label"
+        app:layout_constraintTop_toTopOf="@+id/updated_label"
+        tools:text="02.04.2023 18:56"/>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:showPaths="true"
+        app:layoutDescription="@xml/scene_02">
+    <View
+        android:id="@+id/button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/black"
+        android:text="Button" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
